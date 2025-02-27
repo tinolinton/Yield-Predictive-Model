@@ -13,6 +13,7 @@ This project aims to predict agricultural yield using various machine learning m
 - [Feature Importance](#feature-importance)
 - [Hyperparameter Tuning](#hyperparameter-tuning)
 - [Visualization](#visualization)
+- [Setup and Installation](#setup-and-installation)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -47,6 +48,8 @@ EDA was performed to understand the distribution and relationships of the featur
 - Visualizing the distribution of numerical features and count plots of categorical features
 - Boxplots for numerical features
 
+![EDA Visualization](images/eda_visualization.png)
+
 ## Preprocessing
 
 Preprocessing steps included:
@@ -78,9 +81,13 @@ The models were evaluated using the following metrics:
 
 The evaluation results were compared across models to determine the best-performing model.
 
+![Model Evaluation](images/model_evaluation.png)
+
 ## Feature Importance
 
 Feature importance was calculated for each model to understand the contribution of each feature to the predictions. The importance scores were aggregated and visualized.
+
+![Feature Importance](images/feature_importance.png)
 
 ## Hyperparameter Tuning
 
@@ -97,6 +104,35 @@ Various visualizations were created to understand the data and model performance
 - Boxplots for numerical features
 - Comparison plots for model predictions vs. true values
 - Bar plots for aggregated feature importance
+
+![Visualization](images/visualization.png)
+
+## Setup and Installation
+
+To set up and run this project, follow these steps:
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/Yield-Predictive-Model.git
+    cd Yield-Predictive-Model
+    ```
+
+2. Create and activate a virtual environment:
+    ```sh
+    python -m venv venv
+    venv\Scripts\activate  # On Windows
+    source venv/bin/activate  # On macOS/Linux
+    ```
+
+3. Install the required packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. Run the Jupyter Notebook:
+    ```sh
+    jupyter notebook models.ipynb
+    ```
 
 ## Conclusion
 
