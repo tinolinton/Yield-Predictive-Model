@@ -81,13 +81,13 @@ The models were evaluated using the following metrics:
 
 The evaluation results were compared across models to determine the best-performing model.
 
-![Model Evaluation](images/model_evaluation.png)
+![Model Evaluation](https://i0.wp.com/spotintelligence.com/wp-content/uploads/2024/03/common-regression-metrics-1024x576.webp?resize=1024%2C576&ssl=1)
 
 ## Feature Importance
 
 Feature importance was calculated for each model to understand the contribution of each feature to the predictions. The importance scores were aggregated and visualized.
 
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vpiJ1Nm3lrWLpMB3OQo17g.png)
 
 ## Hyperparameter Tuning
 
