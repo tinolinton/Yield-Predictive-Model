@@ -112,27 +112,30 @@ Various visualizations were created to understand the data and model performance
 To set up and run this project, follow these steps:
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/Yield-Predictive-Model.git
-    cd Yield-Predictive-Model
-    ```
+
+   ```sh
+   git clone https://github.com/yourusername/Yield-Predictive-Model.git
+   cd Yield-Predictive-Model
+   ```
 
 2. Create and activate a virtual environment:
-    ```sh
-    python -m venv venv
-    venv\Scripts\activate  # On Windows
-    source venv/bin/activate  # On macOS/Linux
-    ```
+
+   ```sh
+   python -m venv venv
+   venv\Scripts\activate  # On Windows
+   source venv/bin/activate  # On macOS/Linux
+   ```
 
 3. Install the required packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
+
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 4. Run the Jupyter Notebook:
-    ```sh
-    jupyter notebook models.ipynb
-    ```
+   ```sh
+   jupyter notebook models.ipynb
+   ```
 
 ## Conclusion
 
