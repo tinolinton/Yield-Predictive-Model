@@ -58,6 +58,8 @@ Key variables include:
 - **Management factors**: Use of fertilizers, pesticides, herbicides.
 - **Crop-specific factors**: Area under cultivation, farming scale (small-scale, large-scale, A2).
 
+![Records Distribution](images/records distribution.png)
+
 ## Machine Learning Models
 Four machine learning models were implemented:
 1. **Linear Regression (LR)**: A simple yet interpretable model for understanding linear relationships.
@@ -81,11 +83,20 @@ The models performed as follows:
 | ANN           | 0.8481 |
 | Linear Regression | 0.7254 |
 
+![Base Models Evaluation](images/base models evaluation.png)
+
 **Key Findings:**
 - **Random Forest** outperformed other models with an R²-score of 0.8753.
 - **XGBoost** closely followed, making it a viable alternative.
 - **ANN** captured complex relationships but required more data tuning.
 - **Linear Regression**, while interpretable, struggled with non-linearity.
+
+![Predictions vs True Values](images/preds vs true vaues.png)
+
+## Feature Importance
+Feature importance was calculated to understand the contribution of each feature to the predictions.
+
+![Feature Importance](images/feature importance.png)
 
 ## Conclusions and Recommendations
 - **Key Yield Determinants:** Area under cultivation, farming scale, and pesticide/herbicide value.
@@ -107,3 +118,4 @@ Ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/tinolinton/Yield-Predictive-Model.git
+   cd Yield-Predictive-Model
