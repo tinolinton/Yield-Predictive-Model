@@ -106,5 +106,4 @@ Ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo-url.git
-   cd your-repo-url
+   git clone https://github.com/tinolinton/Yield-Predictive-Model.git
