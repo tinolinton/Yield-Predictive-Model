@@ -1,142 +1,110 @@
-# Yield-Predictive-Model
+# A COMPARATIVE ANALYSIS OF MACHINE LEARNING MODELS FOR PREDICTING MAIZE AND SOYABEAN CROP YIELDS: A CASE OF MASHONALAND WEST
 
-This project aims to predict agricultural yield using various machine learning models, including XGBoost, Linear Regression, Random Forest, and Artificial Neural Networks (ANN). The dataset used for this project is the Agricultural Survey Dataset.
+## Author: Tinotenda Linton Machila (C18132388U)
 
 ## Table of Contents
-
 - [Introduction](#introduction)
+- [Research Aim](#research-aim)
+- [Research Objectives](#research-objectives)
+- [Research Questions](#research-questions)
+- [Methodology](#methodology)
 - [Dataset](#dataset)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-- [Preprocessing](#preprocessing)
-- [Model Training and Tuning](#model-training-and-tuning)
-- [Model Evaluation](#model-evaluation)
-- [Feature Importance](#feature-importance)
-- [Hyperparameter Tuning](#hyperparameter-tuning)
-- [Visualization](#visualization)
-- [Setup and Installation](#setup-and-installation)
-- [Conclusion](#conclusion)
+- [Machine Learning Models](#machine-learning-models)
+- [Evaluation Metrics](#evaluation-metrics)
+- [Results](#results)
+- [Conclusions and Recommendations](#conclusions-and-recommendations)
+- [Installation and Usage](#installation-and-usage)
+- [References](#references)
+
+---
 
 ## Introduction
+Agriculture plays a crucial role in Zimbabwe’s economy, contributing significantly to GDP, employment, and food security. However, declining maize and soyabean yields in Mashonaland West due to climate variability, poor farming practices, and limited adoption of modern technologies necessitate innovative solutions. This research leverages machine learning to predict crop yields and identify key influencing factors, aiming to provide actionable insights for farmers and policymakers.
 
-The goal of this project is to build predictive models to estimate agricultural yield based on various features such as area under crop, value of pesticides/herbicides used, fertilizer used, average rainfall, and average temperature.
+## Research Aim
+To perform a comparative analysis of XGBoost, Linear Regression, Random Forest, and Artificial Neural Network (ANN) models for predicting maize and soyabean crop yields in Mashonaland West.
+
+## Research Objectives
+1. Identify factors affecting maize and soyabean crop yields in Mashonaland West.
+2. Design XGBoost, Linear Regression, Random Forest, and ANN yield prediction models.
+3. Develop XGBoost, Linear Regression, Random Forest, and ANN yield prediction models.
+4. Determine the best-performing model for yield prediction.
+
+## Research Questions
+1. What factors influence maize and soyabean crop yields in Mashonaland West?
+2. How can XGBoost, Linear Regression, Random Forest, and ANN models be designed for yield prediction?
+3. How can these models be developed and implemented?
+4. Which model is the most effective for yield prediction?
+
+## Methodology
+This study follows the **CRISP-DM framework**, which includes:
+- **Data Collection**: Obtaining climatic, management, and crop-specific data from Mashonaland West’s seven districts.
+- **Data Preprocessing**: Cleaning, normalizing, and encoding data for model training.
+- **Model Training**: Using Python-based machine learning libraries to train models.
+- **Model Evaluation**: Comparing models using performance metrics such as **MSE, MAE, and R²-score**.
 
 ## Dataset
+The dataset includes agricultural data from the seven districts of Mashonaland West:
+- Chegutu
+- Hurungwe
+- Kadoma
+- Kariba
+- Makonde
+- Mhondoro-Ngezi
+- Zvimba
 
-The dataset used in this project is the Agricultural Survey Dataset, which contains the following columns:
+Key variables include:
+- **Climatic factors**: Rainfall, temperature, humidity.
+- **Management factors**: Use of fertilizers, pesticides, herbicides.
+- **Crop-specific factors**: Area under cultivation, farming scale (small-scale, large-scale, A2).
 
-- `year`: Year of the survey
-- `district`: District where the survey was conducted
-- `farm_id`: Unique identifier for each farm
-- `area_under_crop`: Area under crop in hectares
-- `sector`: Sector of the farm
-- `crop_type`: Type of crop grown
-- `value_pesticides/herbicides`: Value of pesticides/herbicides used
-- `fertilizer_used_kg/hectare`: Fertilizer used in kg per hectare
-- `average_rainfall`: Average rainfall in mm
-- `average_temperature`: Average temperature in degrees Celsius
-- `yield`: Yield in tonnes
+## Machine Learning Models
+Four machine learning models were implemented:
+1. **Linear Regression (LR)**: A simple yet interpretable model for understanding linear relationships.
+2. **Random Forest (RF)**: A powerful ensemble method that handles non-linearity well.
+3. **XGBoost (XGB)**: A boosting algorithm optimized for predictive performance.
+4. **Artificial Neural Networks (ANNs)**: A deep learning approach capable of capturing complex patterns.
 
-## Exploratory Data Analysis (EDA)
-
-EDA was performed to understand the distribution and relationships of the features in the dataset. Key steps included:
-
-- Displaying the first few rows of the dataset
-- Checking for missing values
-- Descriptive statistics of selected columns
-- Visualizing the number of records per district and sector
-- Calculating and plotting the average yield per hectare by crop type and year
-- Visualizing the distribution of numerical features and count plots of categorical features
-- Boxplots for numerical features
-
-![EDA Visualization](images/eda_visualization.png)
-
-## Preprocessing
-
-Preprocessing steps included:
-
-- Dropping the `farm_id` column
-- Handling missing values by filling them with the median for numerical columns
-- Detecting and handling outliers using the Interquartile Range (IQR) method
-- Normalizing numerical features using MinMaxScaler
-- Encoding categorical features using one-hot encoding
-
-## Model Training and Tuning
-
-Four machine learning models were trained and tuned:
-
-1. **Linear Regression**
-2. **Random Forest Regressor**
-3. **XGBoost Regressor**
-4. **Artificial Neural Network (ANN)**
-
-Each model was trained on the preprocessed dataset, and predictions were made on the test set.
-
-## Model Evaluation
-
+## Evaluation Metrics
 The models were evaluated using the following metrics:
+- **Mean Square Error (MSE)**: Measures the average squared difference between predicted and actual values.
+- **Mean Absolute Error (MAE)**: Measures the average absolute difference between predicted and actual values.
+- **R²-score**: Indicates the proportion of variance explained by the model.
 
-- Mean Squared Error (MSE)
-- Mean Absolute Error (MAE)
-- R² Score
+## Results
+The models performed as follows:
 
-The evaluation results were compared across models to determine the best-performing model.
+| Model          | R²-score |
+|---------------|---------|
+| Random Forest | **0.8753** |
+| XGBoost       | 0.8709 |
+| ANN           | 0.8481 |
+| Linear Regression | 0.7254 |
 
-![Model Evaluation](https://i0.wp.com/spotintelligence.com/wp-content/uploads/2024/03/common-regression-metrics-1024x576.webp?resize=1024%2C576&ssl=1)
+**Key Findings:**
+- **Random Forest** outperformed other models with an R²-score of 0.8753.
+- **XGBoost** closely followed, making it a viable alternative.
+- **ANN** captured complex relationships but required more data tuning.
+- **Linear Regression**, while interpretable, struggled with non-linearity.
 
-## Feature Importance
+## Conclusions and Recommendations
+- **Key Yield Determinants:** Area under cultivation, farming scale, and pesticide/herbicide value.
+- **Best Model:** Random Forest is recommended for yield prediction in Mashonaland West.
+- **Policy Implications:**
+  - Promote **data-driven decision-making** in agriculture.
+  - Encourage **technology adoption** for precision farming.
+  - Invest in **climate resilience strategies**.
 
-Feature importance was calculated for each model to understand the contribution of each feature to the predictions. The importance scores were aggregated and visualized.
+## Installation and Usage
 
-![Feature Importance](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vpiJ1Nm3lrWLpMB3OQo17g.png)
+### Prerequisites
+Ensure you have the following installed:
+- Python (>=3.8)
+- Jupyter Notebook
+- Required libraries: `numpy`, `pandas`, `scikit-learn`, `xgboost`, `tensorflow`, `matplotlib`, `seaborn`
 
-## Hyperparameter Tuning
-
-Hyperparameter tuning was performed for the XGBoost and Random Forest models using GridSearchCV. The best parameters were identified, and the models were retrained with these optimal parameters.
-
-## Visualization
-
-Various visualizations were created to understand the data and model performance, including:
-
-- Bar plots for the number of records per district and sector
-- Bar plots for average yield per hectare by crop type and year
-- Distribution plots for numerical features
-- Count plots for categorical features
-- Boxplots for numerical features
-- Comparison plots for model predictions vs. true values
-- Bar plots for aggregated feature importance
-
-![Visualization](images/visualization.png)
-
-## Setup and Installation
-
-To set up and run this project, follow these steps:
-
+### Installation
 1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/yourusername/Yield-Predictive-Model.git
-   cd Yield-Predictive-Model
-   ```
-
-2. Create and activate a virtual environment:
-
-   ```sh
-   python -m venv venv
-   venv\Scripts\activate  # On Windows
-   source venv/bin/activate  # On macOS/Linux
-   ```
-
-3. Install the required packages:
-
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-4. Run the Jupyter Notebook:
-   ```sh
-   jupyter notebook models.ipynb
-   ```
-
-## Conclusion
-
-This project demonstrates the process of building and evaluating predictive models for agricultural yield using various machine learning techniques. The results show that different models have varying levels of performance, and hyperparameter tuning can significantly improve model accuracy.
+   ```bash
+   git clone https://github.com/your-repo-url.git
+   cd your-repo-url
