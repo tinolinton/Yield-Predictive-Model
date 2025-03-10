@@ -68,7 +68,7 @@ Key variables include:
 - **Management factors**: Use of fertilizers, pesticides, herbicides.
 - **Crop-specific factors**: Area under cultivation, farming scale (small-scale, large-scale, A2).
 
-![Records Distribution](images/records distribution.png)
+![Records Distribution](/images/records%20distribution.png)
 
 ## Machine Learning Models
 
@@ -98,7 +98,7 @@ The models performed as follows:
 | ANN               | 0.8481     |
 | Linear Regression | 0.7254     |
 
-![Base Models Evaluation](images/base models evaluation.png)
+![Base Models Evaluation](/images/base%20models%20evaluation.png)
 
 **Key Findings:**
 
@@ -107,13 +107,13 @@ The models performed as follows:
 - **ANN** captured complex relationships but required more data tuning.
 - **Linear Regression**, while interpretable, struggled with non-linearity.
 
-![Predictions vs True Values](images/preds vs true vaues.png)
+![Predictions vs True Values](/images/preds%20vs%20true%20vaues.png)
 
 ## Feature Importance
 
 Feature importance was calculated to understand the contribution of each feature to the predictions.
 
-![Feature Importance](images/feature importance.png)
+![Feature Importance](/images/feature%20importance.png)
 
 ## Conclusions and Recommendations
 
